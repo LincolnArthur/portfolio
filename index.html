@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arthur Lincoln | Estudante de Engenharia de Computação</title>
+  <meta name="description" content="Estudante de Engenharia de Computação na UNIVASF. Programo em C, Java e Python: jogo com raylib no navegador, labirinto com BFS, Prolog e um jogo em Java.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arthurlincoln.netlify.app/">
+  <meta name="author" content="Arthur Lincoln Pinheiro Herculino Almeida">
+  <meta name="theme-color" content="#0B5394">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arthur Lincoln">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:url" content="https://arthurlincoln.netlify.app/">
+  <meta property="og:title" content="Arthur Lincoln | Estudante de Engenharia de Computação">
+  <meta property="og:description" content="Estudante de Engenharia de Computação na UNIVASF. Programo em C, Java e Python: jogo com raylib no navegador, labirinto com BFS, Prolog e um jogo em Java.">
+  <meta property="og:image" content="https://arthurlincoln.netlify.app/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Arthur Lincoln, estudante de Engenharia de Computação na UNIVASF.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arthur Lincoln | Estudante de Engenharia de Computação">
+  <meta name="twitter:description" content="Estudante de Engenharia de Computação na UNIVASF. Programo em C, Java e Python: jogo com raylib no navegador, labirinto com BFS, Prolog e um jogo em Java.">
+  <meta name="twitter:image" content="https://arthurlincoln.netlify.app/assets/og.png">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/site.css">
+  <!-- Quem usa inglês não vê o texto em português piscando antes da troca -->
+  <style>.i18n-pending body{visibility:hidden}</style>
+  <script>(function(){var l;try{l=localStorage.getItem("lang")}catch(e){}if(l!=="pt"&&l!=="en")l=(navigator.language||"pt").toLowerCase().indexOf("pt")===0?"pt":"en";if(l==="en"){var d=document.documentElement;d.className+=" i18n-pending";setTimeout(function(){d.classList.remove("i18n-pending")},2500)}})();</script>
+  <!-- Estatísticas de visitas (GoatCounter): sem cookies e sem dados pessoais -->
+  <script data-goatcounter="https://arthurlincoln.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo" data-i18n="skip">Pular para o conteúdo</a>
+  <div class="layout">
+    <aside class="side">
+      <div class="side-inner">
+        <a class="side-name" href="/" aria-label="Arthur Lincoln, página inicial" data-i18n-attr="aria-label:logoLabel">Arthur Lincoln</a>
+        <p class="side-role" data-i18n="sideRole">Estudante de Engenharia de Computação</p>
+        <hr>
+        <nav aria-label="Principal" data-i18n-attr="aria-label:navLabel">
+          <ul class="nav">
+            <li><a href="/#projetos" data-i18n="navProjects">Projetos</a></li>
+            <li><a href="/curriculo/" data-i18n="navResume">Currículo</a></li>
+            <li><a href="/#contato" data-i18n="navContact">Contato</a></li>
+          </ul>
+        </nav>
+        <h2 class="side-h" data-i18n="sideLinks">Links</h2>
+        <ul class="contacts" data-links="full"></ul>
+        <a class="side-cta" href="/assets/cv/arthur-lincoln-curriculo.pdf" download data-i18n="sideCta" data-i18n-attr="href:pdfHref">Baixar currículo (PDF)</a>
+        <div class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-lang="pt" aria-pressed="true" lang="pt-BR">Português</button><span aria-hidden="true">|</span><button type="button" data-lang="en" aria-pressed="false" lang="en">English</button></div>
+      </div>
+    </aside>
+    <div class="sheet">
+      <main id="conteudo">
+        <header class="doc-head">
+          <h1 class="name">Arthur Lincoln</h1>
+          <ul class="contact-line">
+            <li><a href="https://github.com/LincolnArthur">github.com/LincolnArthur</a></li>
+            <li><a href="#contato" data-i18n="sendMsg">Mandar uma mensagem</a></li>
+          </ul>
+        </header>
+
+        <section aria-labelledby="sobre">
+          <h2 id="sobre" data-i18n="hAbout">SOBRE MIM</h2>
+          <p class="intro" data-i18n="intro1">Estudo Engenharia de Computação na UNIVASF, em Juazeiro (BA), e também curso Direito na Unibras. Programo em C, Java e Python.</p>
+          <p data-i18n="intro2">Aqui estão meus projetos: o Eixo 0, um jogo que estou fazendo em Java, e os das disciplinas do curso, em C: um jogo de fazenda feito com raylib, que dá para jogar aqui mesmo no navegador, um programa que encontra a saída de labirintos e um pequeno interpretador de Prolog.</p>
+          <div class="cta-row" data-hide-sticky>
+            <a class="btn btn-primary" href="/curriculo/" data-i18n="ctaResume">Ver currículo</a>
+            <a class="btn" href="#contato" data-i18n="ctaContact">Entrar em contato</a>
+          </div>
+        </section>
+
+        <section id="projetos" aria-labelledby="projetos-h">
+          <h2 id="projetos-h" data-i18n="hProjects">PROJETOS</h2>
+
+          <article class="entry">
+            <p class="entry-date">2026</p>
+            <h3 class="entry-title">Eixo 0 <span class="where">| <span data-i18n="eCourse">Projeto pessoal, versão barebones | Java 17 e Maven</span></span></h3>
+            <ul class="bullets">
+            <li data-i18n="e1">Versão simplificada do meu jogo Eixo 0, escrita para praticar orientação a objetos: <strong>27 classes</strong> organizadas em pacotes de mundo e personagens.</li>
+            <li data-i18n="e2">Classes abstratas e interfaces para personagens, inimigos (corpo a corpo, voador e de longo alcance), armas e habilidades com custo de energia e tempo de recarga.</li>
+            <li data-i18n="e3">Inventário, sistema de nível e experiência, e mapa de salas indexado por id com LinkedHashMap.</li>
+            </ul>
+            <figure>
+<pre class="transcript" tabindex="0" aria-label="Trecho de Sniper.java" data-i18n-attr="aria-label:eCodeLabel">//Tipo de inimigo com range
+public class Sniper extends Inimigo {
+    //Só um parâmetro novo, o resto puxa da superclasse -lincoln
+    private Arma arma;
+
+    //Construtor
+    public Sniper(String nome, int vidaMaxima, Arma arma) {
+        super(nome, vidaMaxima);
+        this.arma = arma;
+    }
+
+    //@Override é uma anotação, que é uma marcação que se coloca no código afim
+    //de dar informação extra à IDE
+    //Nesse caso ela diz:
+    //"EU TÔ LIGADO QUE TÁ SOBRESCREVENDO E OU EU NÃO LIGO, OU FOI PQ EU QUIS"
+    //-lincoln
+    @Override
+    public int atacar() {
+        return arma.causarDano();
+    }
+}</pre>
+              <figcaption data-i18n="eCap">Trecho de Sniper.java, o inimigo de longo alcance. Os comentários são as minhas anotações de estudo.</figcaption>
+            </figure>
+          </article>
+
+          <article class="entry">
+            <p class="entry-date">2026</p>
+            <h3 class="entry-title">maze-solver-bfs <span class="where">| <span data-i18n="c2">Algoritmos e Estruturas de Dados</span> | UNIVASF</span></h3>
+            <ul class="bullets">
+            <li data-i18n="m1">Implementei busca em largura com fila sequencial e matrizes de visitados e de pais para reconstruir <strong>o menor caminho</strong> até a saída.</li>
+            <li data-i18n="m2">Animação passo a passo no terminal com cores ANSI e leitura de 10 labirintos a partir de arquivos de texto.</li>
+            <li data-i18n="m3">Projeto em dupla com Caio Benevides.</li>
+            </ul>
+            <ul class="entry-links">
+              <li><a href="https://github.com/LincolnArthur/maze-solver-bfs" data-i18n="code">Código no GitHub</a></li>
+            </ul>
+            <figure>
+              <div class="board" id="board" role="img" aria-label="O labirinto do projeto sendo resolvido por busca em largura, de A até B." data-i18n-attr="aria-label:mazeLabel"></div>
+              <div class="maze-bar">
+                <p class="status" id="status" aria-live="polite"></p>
+                <button class="btn btn-small" type="button" id="rerun" data-i18n="rerun">Rodar de novo</button>
+              </div>
+              <figcaption data-i18n="mazeCap">Este é o próprio labirinto do programa, resolvido aqui com a mesma lógica do busca.c. Clique numa célula para pôr ou tirar uma parede.</figcaption>
+            </figure>
+          </article>
+
+          <article class="entry">
+            <p class="entry-date">2026</p>
+            <h3 class="entry-title">prolog-simulator-c <span class="where">| <span data-i18n="c2">Algoritmos e Estruturas de Dados</span> | UNIVASF</span></h3>
+            <ul class="bullets">
+            <li data-i18n="p1">Construí um interpretador no estilo Prolog com parser de fatos e regras, predicados indexados em árvore binária de busca e cláusulas em listas encadeadas.</li>
+            <li data-i18n="p2">Motor de resolução com unificação, renomeação de variáveis e backtracking, que encontra <strong>todas as soluções</strong> de uma consulta.</li>
+            <li data-i18n="p3">Bancos de conhecimento carregados de arquivos .txt. Projeto em dupla com Caio Benevides.</li>
+            </ul>
+            <ul class="entry-links">
+              <li><a href="https://github.com/LincolnArthur/prolog-simulator-c" data-i18n="code">Código no GitHub</a></li>
+            </ul>
+            <figure>
+<pre class="transcript" tabindex="0" aria-label="Sessão do simulador de Prolog" data-i18n-attr="aria-label:prologLabel">pai(cronos, zeus).
+pai(zeus, atena).
+pai(zeus, ares).
+mesmo_pai(X, Y) :- pai(Z, X), pai(Z, Y).
+
+Digite a consulta: <b>mesmo_pai(atena, Y)</b>
+
+  Solucao 1:  Y = atena
+  Solucao 2:  Y = ares
+  Solucao 3:  Y = apolo
+  Solucao 4:  Y = artemis
+  Solucao 5:  Y = hermes
+  Total: 5 solucao(oes).</pre>
+              <figcaption data-i18n="prologCap">Consulta no banco de mitologia grega, um dos nove que acompanham o projeto.</figcaption>
+            </figure>
+          </article>
+
+          <article class="entry">
+            <p class="entry-date">2025</p>
+            <h3 class="entry-title">raylib-farm <span class="where">| <span data-i18n="c1">Algoritmos e Programação</span> | UNIVASF</span></h3>
+            <ul class="bullets">
+            <li data-i18n="f1">Desenvolvi um jogo de fazenda 2D em C com raylib: loja com rolagem, inventário, plantação em grid com crescimento por tempo e sistema de XP e níveis.</li>
+            <li data-i18n="f2">Publiquei uma versão que roda no navegador (WebAssembly) e executáveis para Windows e Linux que <strong>não exigem instalar a raylib</strong>.</li>
+            <li data-i18n="f3">Na revisão do projeto, corrigi 4 bugs, entre eles uma falha que permitia <strong>gerar dinheiro infinito</strong>.</li>
+            </ul>
+            <ul class="entry-links">
+              <li><a href="https://lincolnarthur.github.io/raylib-farm/" data-i18n="play">Jogar no navegador</a></li>
+              <li><a href="https://github.com/LincolnArthur/raylib-farm/releases/latest" data-i18n="download">Baixar para Windows e Linux</a></li>
+              <li><a href="https://github.com/LincolnArthur/raylib-farm" data-i18n="code">Código no GitHub</a></li>
+            </ul>
+            <figure>
+              <video id="farm-video" class="media" muted loop playsinline preload="none" width="640" height="480" data-poster="/assets/raylib-farm-poster.webp" aria-label="Partida do raylib-farm: comprando grãos, plantando nos seis canteiros, colhendo e abrindo o celeiro." data-i18n-attr="aria-label:farmVideo">
+                <source src="/assets/raylib-farm.mp4" type="video/mp4">
+              </video>
+              <figcaption data-i18n="farmCap">Uma partida, acelerada na parte em que as plantas crescem.</figcaption>
+            </figure>
+          </article>
+
+          <h2 data-i18n="hOther">OUTROS PROJETOS</h2>
+          <p class="other-label" data-i18n="oLabel">ELETROTÉCNICA</p>
+          <p class="other"><b class="other-title" data-i18n="oTitle">SIMULADOR DE IRRIGAÇÃO EMBARCADA EM C |</b> <span data-i18n="oWhere">UNIVASF, com Hiago de Oliveira Lima e Rafaela Nunes Albuquerque. Simula um Arduino que lê um sensor de umidade do solo e regula a potência da bomba d'água.</span></p>
+        </section>
+
+        <section id="contato" aria-labelledby="contato-h" data-hide-sticky>
+          <h2 id="contato-h" data-i18n="hContact">CONTATO</h2>
+          <p data-i18n="contactText">Use o formulário para falar de estágio, projetos ou dúvidas sobre o meu código. Eu respondo no e-mail que você informar.</p>
+          <form id="form-contato" name="contato" method="POST" action="/obrigado/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="contato">
+            <p class="hp"><label><span data-i18n="hpLabel">Não preencha se você é uma pessoa:</span> <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+            <div id="form-msg" class="form-msg" role="status" aria-live="polite"></div>
+            <div class="field">
+              <label for="nome-campo"><span data-i18n="fName">Nome</span> <span class="req" data-i18n="req">(obrigatório)</span></label>
+              <input id="nome-campo" name="nome" type="text" autocomplete="name" required placeholder="Seu nome" data-i18n-attr="placeholder:phName" aria-describedby="nome-erro">
+              <p class="field-error" id="nome-erro"></p>
+            </div>
+            <div class="field">
+              <label for="email-campo"><span data-i18n="fEmail">E-mail</span> <span class="req" data-i18n="req">(obrigatório)</span></label>
+              <input id="email-campo" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="nome@exemplo.com" data-i18n-attr="placeholder:phEmail" aria-describedby="email-erro">
+              <p class="field-error" id="email-erro"></p>
+            </div>
+            <div class="field">
+              <label for="mensagem-campo"><span data-i18n="fMsg">Mensagem</span> <span class="req" data-i18n="req">(obrigatório)</span></label>
+              <textarea id="mensagem-campo" name="mensagem" rows="6" required placeholder="Sobre o que você quer conversar?" data-i18n-attr="placeholder:phMsg" aria-describedby="mensagem-erro"></textarea>
+              <p class="field-error" id="mensagem-erro"></p>
+            </div>
+            <p class="consent" data-i18n="consent">Seus dados são usados só para responder a você. Veja a <a href="/privacidade/">política de privacidade</a>.</p>
+            <button class="btn btn-primary" type="submit" data-i18n="send">Enviar mensagem</button>
+          </form>
+        </section>
+      </main>
+      <footer class="site-footer" data-hide-sticky>
+        <p>© <span class="year">2026</span> Arthur Lincoln Pinheiro Herculino Almeida</p>
+        <nav aria-label="Rodapé" data-i18n-attr="aria-label:footLabel">
+          <ul class="foot-nav">
+            <li><a href="/" data-i18n="footHome">Início</a></li>
+            <li><a href="/curriculo/" data-i18n="footResume">Currículo</a></li>
+            <li><a href="/#contato" data-i18n="footContact">Contato</a></li>
+            <li><a href="/privacidade/" data-i18n="footPrivacy">Privacidade</a></li>
+            <li><a href="https://github.com/LincolnArthur/portfolio" data-i18n="footSource">Código do site</a></li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
+  </div>
+
+  <div class="sticky-cta" aria-label="Atalhos">
+    <a href="/curriculo/" data-i18n="stickyResume">Currículo</a>
+    <a class="solid" href="#contato" data-i18n="stickyContact">Fale comigo</a>
+  </div>
+  <script>window.PAGE_EN = {
+    "logoLabel": "Arthur Lincoln, home page",
+    "navLabel": "Main",
+    "footLabel": "Footer",
+    "pdfHref": "/assets/cv/arthur-lincoln-resume.pdf",
+    "metaTitle": "Arthur Lincoln | Computer Engineering student",
+    "metaDesc": "Computer Engineering student at UNIVASF (Brazil). I program in C, Java and Python: a raylib browser game, a BFS maze solver, Prolog and a Java game.",
+    "skip": "Skip to content",
+    "sendMsg": "Send me a message",
+    "hAbout": "ABOUT ME",
+    "intro1": "I study Computer Engineering at UNIVASF, in Juazeiro, Bahia (Brazil), and I'm also studying Law at Unibras. I program in C, Java and Python.",
+    "intro2": "Here are my projects: Eixo 0, a game I'm building in Java, plus the ones from my courses in C: a farming game made with raylib that you can play right here in the browser, a program that finds its way out of mazes, and a small Prolog interpreter.",
+    "ctaResume": "View résumé",
+    "ctaContact": "Get in touch",
+    "hProjects": "PROJECTS",
+    "c1": "Algorithms and Programming",
+    "c2": "Algorithms and Data Structures",
+    "f1": "Built a 2D farming game in C with raylib: scrollable shop, inventory, time-based crop growth on a grid, and an XP and level system.",
+    "f2": "Shipped a browser version (WebAssembly) and Windows and Linux builds that <strong>don't require installing raylib</strong>.",
+    "f3": "While revising the project, fixed 4 bugs, including one that <strong>allowed infinite money</strong>.",
+    "farmVideo": "raylib-farm gameplay: buying grain, planting the six plots, harvesting and opening the barn.",
+    "farmCap": "A game session, sped up while the crops grow.",
+    "play": "Play in the browser",
+    "code": "Code on GitHub",
+    "download": "Download for Windows and Linux",
+    "m1": "Implemented breadth-first search with a sequential queue plus visited and parent matrices to rebuild <strong>the shortest path</strong> to the exit.",
+    "m2": "Step-by-step terminal animation with ANSI colors; loads 10 mazes from text files.",
+    "m3": "Pair project with Caio Benevides.",
+    "mazeLabel": "The maze from the project being solved by breadth-first search, from A to B.",
+    "rerun": "Run again",
+    "mazeCap": "This is the program's own maze, solved here with the same logic as busca.c. Click a cell to add or remove a wall.",
+    "p1": "Built a Prolog-style interpreter with a parser for facts and rules, predicates indexed in a binary search tree and clauses stored in linked lists.",
+    "p2": "Resolution engine with unification, variable renaming and backtracking that finds <strong>every solution</strong> to a query.",
+    "p3": "Knowledge bases loaded from .txt files. Pair project with Caio Benevides.",
+    "prologLabel": "Session of the Prolog simulator",
+    "prologCap": "Query on the Greek mythology knowledge base, one of the nine that ship with the project.",
+    "hOther": "OTHER PROJECTS",
+    "oLabel": "ELECTROTECHNICS",
+    "oTitle": "EMBEDDED IRRIGATION SIMULATOR IN C |",
+    "oWhere": "UNIVASF, with Hiago de Oliveira Lima and Rafaela Nunes Albuquerque. Simulates an Arduino reading a soil moisture sensor and setting the water pump's power.",
+    "eCourse": "Personal project, barebones version | Java 17 and Maven",
+    "e1": "Simplified version of my game Eixo 0, written to practice object-oriented design: <strong>27 classes</strong> organized into world and character packages.",
+    "e2": "Abstract classes and interfaces for characters, enemies (melee, flying and long-range), weapons, and abilities with energy cost and cooldown.",
+    "e3": "Inventory, level and experience system, and a room map indexed by id with a LinkedHashMap.",
+    "eCodeLabel": "Excerpt from Sniper.java",
+    "eCap": "Excerpt from Sniper.java, the long-range enemy. The comments are my own study notes, in Portuguese.",
+    "hContact": "CONTACT",
+    "contactText": "Use the form for internships, projects or questions about my code. I'll reply to the email you provide.",
+    "fName": "Name",
+    "fEmail": "Email",
+    "fMsg": "Message",
+    "req": "(required)",
+    "phName": "Your name",
+    "phEmail": "name@example.com",
+    "phMsg": "What would you like to talk about?",
+    "consent": "Your data is only used to reply to you. See the <a href=\"/privacidade/\">privacy policy</a>.",
+    "send": "Send message",
+    "hpLabel": "Leave this blank if you're a person:"
+  };</script>
+  <script src="/assets/site.js"></script>
+
+  <script>
+    // Labirinto do Projeto 1 (lab_original do main.c), resolvido por BFS
+    (() => {
+      const MSG = {
+        pt: { stepping: n => `Explorando… passo ${n}.`, found: (n, len) => `Saída encontrada em ${n} passos, por um caminho de ${len} células.`, none: "FALHA: caminho inexistente. Tire uma parede para liberar a passagem." },
+        en: { stepping: n => `Exploring… step ${n}.`, found: (n, len) => `Exit found in ${n} steps, along a path of ${len} cells.`, none: "FAILED: no path exists. Remove a wall to open the way." }
+      };
+      const LAB = [
+        [0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0],
+        [1,0,1,0,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,0],
+        [1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0],
+        [1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,0],
+        [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0],
+        [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1,0],
+        [0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0],
+        [1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,0],
+        [0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0],
+        [0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0]
+      ];
+      const ROWS = LAB.length, COLS = LAB[0].length;
+      const board = document.getElementById("board");
+      const statusEl = document.getElementById("status");
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const walls = LAB.map(r => r.slice());
+      const cells = [];
+      let state = { kind: "idle" }, runId = 0, started = false;
+
+      for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) {
+        const d = document.createElement("div");
+        d.className = "cell" + (r === 0 && c === 0 ? " start" : "") + (r === ROWS - 1 && c === COLS - 1 ? " end" : "");
+        d.addEventListener("click", () => toggle(r, c));
+        board.appendChild(d); cells.push(d);
+      }
+      const at = (r, c) => cells[r * COLS + c];
+      function paint() {
+        for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) {
+          const el = at(r, c);
+          el.classList.remove("visited", "head", "path");
+          el.classList.toggle("wall", walls[r][c] === 1);
+        }
+      }
+      function bfs() {
+        // mesma ideia do busca.c: fila, visitados e pais para refazer o caminho
+        const order = [], pai = {}, seen = new Set(["0,0"]), fila = [[0, 0]];
+        const dx = [-1, 1, 0, 0], dy = [0, 0, -1, 1];
+        let achou = false;
+        while (fila.length) {
+          const [x, y] = fila.shift();
+          if (x === ROWS - 1 && y === COLS - 1) { achou = true; break; }
+          order.push([x, y]);
+          for (let i = 0; i < 4; i++) {
+            const nx = x + dx[i], ny = y + dy[i], k = nx + "," + ny;
+            if (nx >= 0 && nx < ROWS && ny >= 0 && ny < COLS && !walls[nx][ny] && !seen.has(k)) { seen.add(k); pai[k] = [x, y]; fila.push([nx, ny]); }
+          }
+        }
+        const path = [];
+        if (achou) { let p = [ROWS - 1, COLS - 1]; while (p) { path.push(p); p = pai[p[0] + "," + p[1]]; } }
+        return { order, path, achou };
+      }
+      function status() {
+        const m = MSG[SITE.lang];
+        statusEl.textContent = state.kind === "running" ? m.stepping(state.step)
+          : state.kind === "found" ? m.found(state.step, state.len)
+          : state.kind === "none" ? m.none : "";
+      }
+      const sleep = ms => new Promise(r => setTimeout(r, ms));
+      async function run() {
+        const id = ++runId;
+        paint();
+        const { order, path, achou } = bfs();
+        if (reduce) {
+          order.forEach(([x, y]) => at(x, y).classList.add("visited"));
+          path.forEach(([x, y]) => at(x, y).classList.add("path"));
+        } else {
+          let prev = null;
+          for (let i = 0; i < order.length; i++) {
+            if (id !== runId) return;
+            if (prev) { prev.classList.remove("head"); prev.classList.add("visited"); }
+            prev = at(...order[i]); prev.classList.add("head");
+            state = { kind: "running", step: i + 1 }; status();
+            await sleep(30);
+          }
+          if (prev) { prev.classList.remove("head"); prev.classList.add("visited"); }
+          for (const p of path) { if (id !== runId) return; at(...p).classList.add("path"); await sleep(30); }
+        }
+        state = achou ? { kind: "found", step: order.length, len: path.length } : { kind: "none" };
+        status();
+      }
+      function toggle(r, c) {
+        if ((r === 0 && c === 0) || (r === ROWS - 1 && c === COLS - 1)) return;
+        walls[r][c] = walls[r][c] ? 0 : 1;
+        run();
+      }
+      document.getElementById("rerun").addEventListener("click", run);
+      document.addEventListener("langchange", status);
+      paint();
+      // a busca começa quando o labirinto aparece na tela
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver((es, o) => { if (!started && es.some(e => e.isIntersecting)) { started = true; o.disconnect(); run(); } }, { threshold: 0.4 }).observe(board);
+      } else run();
+
+      // vídeo do raylib-farm: capa e vídeo só carregam perto de aparecer
+      const v = document.getElementById("farm-video");
+      if (v) {
+        const setPoster = () => { if (!v.poster) v.poster = v.dataset.poster; };
+        if (!("IntersectionObserver" in window)) { setPoster(); v.controls = true; return; }
+        new IntersectionObserver((es, o) => { if (es.some(e => e.isIntersecting)) { setPoster(); o.disconnect(); } }, { rootMargin: "400px" }).observe(v);
+        if (reduce) { v.controls = true; v.preload = "metadata"; }
+        else new IntersectionObserver(es => es.forEach(e => {
+          if (e.isIntersecting) { v.preload = "auto"; v.play().catch(() => { v.controls = true; }); } else v.pause();
+        }), { threshold: 0.3 }).observe(v);
+      }
+    })();
+  </script>
+</body>
+</html>
